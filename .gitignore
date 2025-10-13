@@ -1,0 +1,58 @@
+# Visual Studio / .NET
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Tt]est[Rr]esult*/
+[Aa]rtifacts/
+_ReSharper*/
+*.ncrunch*
+*.ndproj
+*.nupkg
+*.snupkg
+*.lock.json
+project.lock.json
+.project
+.idea/
+.vscode/
+*.DS_Store
+*.coverage*
+*.codecoverage
+coverage/
+
+# NuGet
+packages/
+.nuget/
+
+# Rider
+.idea/
+*.iml
+
+# DocFX
+_site/
+site/
+api/
+docs/_site/
+docs/api/
+.temp/
+.cache/
+.docfx/
+*.cache
+
+# GitHub
+.github/*.tmp
+
+# Build outputs
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.db
+
+# OS
+Thumbs.db
+.DS_Store

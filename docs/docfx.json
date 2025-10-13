@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": ["**/*.csproj"],
+          "src": "../src"
+        }
+      ],
+      "output": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": ["**/*.{md,yml}"],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      { "files": ["docs/images/**"] }
+    ],
+    "overwrite": [ { "files": ["docs/overwrites/**.md"] } ],
+    "globalMetadata": {
+      "_appName": "XamlDS.ITK",
+      "_appTitle": "Industrial Touch Kit",
+      "_enableSearch": true,
+      "_appFooter": "© 2025 Xaml Design Studio. All rights reserved.",
+      "_disableContribution": true
+    },
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ]
+  }
+}
