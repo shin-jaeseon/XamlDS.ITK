@@ -19,40 +19,25 @@ concurrency:
   cancel-in-progress: false
   
 jobs:
-  build:
-    name: Build docs (Windows)
-    runs-on: windows-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '9.0.x'
-
-      - name: Install docfx
-        run: dotnet tool update -g docfx
-
-      - name: Build docs (docfx)
-        run: docfx docs/docfx.json
-
-      - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'docs/_site'
-
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
+  publish-docs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download pages artifact
-        uses: actions/download-pages-artifact@v2
+    runs-on: windows-latest
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Dotnet Setup
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.x'
+    - run: dotnet tool update -g docfx
+    - run: docfx docs/docfx.json
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: 'docs/_site'
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
