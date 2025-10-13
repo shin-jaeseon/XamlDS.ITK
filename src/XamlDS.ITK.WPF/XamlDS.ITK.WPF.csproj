@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>XamlDS.ITK</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XamlDS.ITK.Core\XamlDS.ITK.Core.csproj" />
+    <ProjectReference Include="..\XamlDS.ITK.WPF.Foundation\XamlDS.ITK.WPF.Foundation.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -7,4 +7,8 @@
     <RootNamespace>XamlDS.ITK</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\XamlDS.ITK.Core\XamlDS.ITK.Core.csproj" />
+  </ItemGroup>
+
 </Project>

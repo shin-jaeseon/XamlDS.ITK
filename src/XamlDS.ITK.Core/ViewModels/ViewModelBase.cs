@@ -16,7 +16,7 @@ using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 
-namespace XamlDS.ITK.Core.ViewModel;
+namespace XamlDS.ITK.ViewModel;
 
 /// <summary>
 /// A base class for ViewModels implementing the MVVM pattern, compatible with Avalonia, WPF, and WinUI3.

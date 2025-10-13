@@ -7,4 +7,9 @@
     <RootNamespace>XamlDS.ITK</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\XamlDS.ITK.AvaloniaUI.Foundation\XamlDS.ITK.AvaloniaUI.Foundation.csproj" />
+    <ProjectReference Include="..\XamlDS.ITK.Core\XamlDS.ITK.Core.csproj" />
+  </ItemGroup>
+
 </Project>

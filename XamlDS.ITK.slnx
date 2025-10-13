@@ -1,3 +1,15 @@
 <Solution>
-  <Project Path="src/XamlDS.ITK.Core/XamlDS.ITK.Core.csproj" Id="68647fee-f726-4883-aa82-3e41dcbb181c" />
+  <Folder Name="/samples/" />
+  <Folder Name="/samples/ITKSandbox/">
+    <Project Path="samples/ITKSandbox/ITKSandbox.AvaloniaUIApp/ITKSandbox.AvaloniaUIApp.csproj" Id="31078ebd-d029-4e27-878e-ed99e2abea54" />
+    <Project Path="samples/ITKSandbox/ITKSandbox.Main/ITKSandbox.Main.csproj" Id="e728c173-1144-4567-8fbf-2b30b9e9bb2f" />
+    <Project Path="samples/ITKSandbox/ITKSandbox.WPFApp/ITKSandbox.WPFApp.csproj" Id="5dbfa1af-e78d-41f7-b826-93b50117bc53" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/XamlDS.ITK.AvaloniaUI.Foundation/XamlDS.ITK.AvaloniaUI.Foundation.csproj" Id="3b131746-9281-49c6-8f44-2a722fbc18fa" />
+    <Project Path="src/XamlDS.ITK.AvaloniaUI/XamlDS.ITK.AvaloniaUI.csproj" />
+    <Project Path="src/XamlDS.ITK.Core/XamlDS.ITK.Core.csproj" Id="68647fee-f726-4883-aa82-3e41dcbb181c" />
+    <Project Path="src/XamlDS.ITK.WPF.Foundation/XamlDS.ITK.WPF.Foundation.csproj" Id="e5f7ed59-d534-4e8d-ada6-b716db10efb7" />
+    <Project Path="src/XamlDS.ITK.WPF/XamlDS.ITK.WPF.csproj" Id="585d439d-540a-4dca-88b4-3689dbd3954e" />
+  </Folder>
 </Solution>
