@@ -1,5 +1,5 @@
 ﻿
-namespace XamlDS.ITK;
+namespace XamlDS.ITK.WPF;
 
 public class WPFLibrary
 {

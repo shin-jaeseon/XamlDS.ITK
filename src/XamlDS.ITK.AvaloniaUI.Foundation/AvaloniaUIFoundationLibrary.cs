@@ -1,4 +1,4 @@
-﻿namespace XamlDS.ITK;
+﻿namespace XamlDS.ITK.AvaloniaUI;
 
 public class AvaloniaUIFoundationLibrary
 {
