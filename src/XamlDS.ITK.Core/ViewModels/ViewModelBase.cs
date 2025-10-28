@@ -1,13 +1,4 @@
-﻿// <copyright file="Cvm.cs" company="Xaml Design Studio">
-// Copyright (c) Xaml Design Studio. All rights reserved.
-// Licensed under the MIT License. See the LICENSE file in the project root for more information.
-// </copyright>
-// This file is part of the XamlDS.ITK.Core open source project.
-// It defines the abstract base class for ViewModels (Vm),
-// providing a generic implementation for handling property changes in MVVM applications.
-// <author>Shin Jae Seon</author>
-// <date>2025-08-05</date>
-// <summary>
+﻿// <summary>
 // Base class for all ViewModel classes, implementing INotifyPropertyChanged.
 // Provides methods for property change notification and value setting.
 // </summary>
@@ -16,10 +7,12 @@ using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 
-namespace XamlDS.ITK.ViewModel;
+namespace XamlDS.ITK.ViewModels;
 
 /// <summary>
-/// A base class for ViewModels implementing the MVVM pattern, compatible with Avalonia, WPF, and WinUI3.
+/// Base class for all ViewModel classes, implementing INotifyPropertyChanged.
+/// Provides methods for property change notification and value setting,
+/// compatible with Avalonia, WPF, and WinUI3.
 /// </summary>
 public abstract class ViewModelBase : INotifyPropertyChanged, IDisposable
 {

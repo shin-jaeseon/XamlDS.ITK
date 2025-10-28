@@ -16,7 +16,7 @@ charset = utf-8-bom
 
 # Xaml files
 [*.{xaml,axaml}]
-indent_size = 2
+indent_size = 4
 
 # Xml project files
 [*.{csproj,vcxproj,vcxproj.filters,proj,nativeproj,locproj}]

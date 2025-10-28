@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\XamlDS.ITK.WPF\XamlDS.ITK.WPF.csproj" />
+    <ProjectReference Include="..\ITKSandbox.Main\ITKSandbox.Main.csproj" />
   </ItemGroup>
 
 </Project>

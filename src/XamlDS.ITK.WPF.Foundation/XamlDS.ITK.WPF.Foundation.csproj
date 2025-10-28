@@ -12,4 +12,8 @@
     <ProjectReference Include="..\XamlDS.ITK.Core\XamlDS.ITK.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Converters\" />
+  </ItemGroup>
+
 </Project>

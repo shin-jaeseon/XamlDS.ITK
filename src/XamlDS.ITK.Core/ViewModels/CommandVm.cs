@@ -1,14 +1,12 @@
-﻿// <copyright file="EntityVm.cs" company="Xaml Design Studio">
-// Copyright (c) Xaml Design Studio. All rights reserved.
-// Licensed under the MIT License. See the LICENSE file in the project root for more information.
-// </copyright>
+﻿using System.Windows.Input;
+using XamlDS.ITK.Input;
 
 namespace XamlDS.ITK.ViewModels;
 
 /// <summary>
-/// Base class for all Entity ViewModel classes.
+/// Command ViewModel base class
 /// </summary>
-public class EntityVm(string name) : ViewModelBase
+public abstract class CommandVm(string name) : ViewModelBase
 {
     private readonly string _name = name;
 
@@ -48,5 +46,21 @@ public class EntityVm(string name) : ViewModelBase
     {
         get => _description;
         set => SetProperty(ref _description, value);
+    }
+
+    private ICommand? _command = null;
+
+    public virtual ICommand Command
+    {
+        get
+        {
+            return _command ??= new CommandHandler(Execute, CanExecute);
+        }
+        set => SetProperty(ref _command, value);
+    }
+    public abstract void Execute(object? parameter);
+    public virtual bool CanExecute(object? parameter)
+    {
+        return true;
     }
 }
