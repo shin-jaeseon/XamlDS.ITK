@@ -1,4 +1,4 @@
-﻿// <copyright file="DoubleFvm.cs" company="Xaml Design Studio">
+﻿// <copyright file="IntFvm.cs" company="Xaml Design Studio">
 // Copyright (c) Xaml Design Studio. All rights reserved.
 // Licensed under the MIT License. See the LICENSE file in the project root for more information.
 // </copyright>
@@ -6,23 +6,23 @@
 namespace XamlDS.ITK.ViewModels.Fields;
 
 /// <summary>
-/// Represents a double-precision floating-point numeric field ViewModel.
+/// Represents a signed32-bit integer numeric field ViewModel.
 /// </summary>
 /// <remarks>
 /// Inherits <see cref="FieldVm{T}.Value"/>, <see cref="FieldVm{T}.IsHidden"/>, and <see cref="FieldVm{T}.IsReadOnly"/>.
-/// Specializes <see cref="NumericFvm{T}"/> for <see cref="double"/> and initializes
+/// Specializes <see cref="NumericFvm{T}"/> for <see cref="int"/> and initializes
 /// <see cref="NumericFvm{T}.Minimum"/> and <see cref="NumericFvm{T}.Maximum"/> to
-/// <see cref="double.MinValue"/> and <see cref="double.MaxValue"/>, respectively.
+/// <see cref="int.MinValue"/> and <see cref="int.MaxValue"/>, respectively.
 /// </remarks>
-public class DoubleFvm : NumericFvm<double>
+public class IntFvm : NumericFvm<int>
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="DoubleFvm"/> class.
+    /// Initializes a new instance of the <see cref="IntFvm"/> class.
     /// </summary>
     /// <param name="name">The display or identifier name for this property.</param>
-    public DoubleFvm(string name) : base(name)
+    public IntFvm(string name) : base(name)
     {
-        Minimum = double.MinValue;
-        Maximum = double.MaxValue;
+        Minimum = int.MinValue;
+        Maximum = int.MaxValue;
     }
 }

@@ -1,4 +1,4 @@
-﻿// <copyright file="StringPvm.cs" company="Xaml Design Studio">
+﻿// <copyright file="StringFvm.cs" company="Xaml Design Studio">
 // Copyright (c) Xaml Design Studio. All rights reserved.
 // Licensed under the MIT License. See the LICENSE file in the project root for more information.
 // </copyright>
@@ -6,18 +6,19 @@
 namespace XamlDS.ITK.ViewModels.Fields;
 
 /// <summary>
-/// Represents a string property ViewModel.
+/// Represents a string field ViewModel.
 /// </summary>
 /// <remarks>
-/// Initializes the <see cref="FieldVm{T}.Value"/> to an empty string by default.
+/// Inherits <see cref="FieldVm{T}.Value"/>, <see cref="FieldVm{T}.IsHidden"/>, and <see cref="FieldVm{T}.IsReadOnly"/>. Initializes
+/// <see cref="FieldVm{T}.Value"/> to an empty string by default.
 /// </remarks>
-public class StringPvm : FieldVm<string>
+public class StringFvm : FieldVm<string>
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="StringPvm"/> class.
+    /// Initializes a new instance of the <see cref="StringFvm"/> class.
     /// </summary>
     /// <param name="name">The display or identifier name for this property.</param>
-    public StringPvm(string name) : base(name)
+    public StringFvm(string name) : base(name)
     {
         Value = string.Empty;
     }

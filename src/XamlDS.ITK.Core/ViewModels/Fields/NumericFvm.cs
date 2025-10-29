@@ -7,8 +7,12 @@ using System.Numerics;
 namespace XamlDS.ITK.ViewModels.Fields;
 
 /// <summary>
-/// Base class for all Numeric Property Entity ViewModel classes.
+/// Base class for all numeric field ViewModel types.
 /// </summary>
+/// <remarks>
+/// Inherits <see cref="FieldVm{T}.Value"/>, <see cref="FieldVm{T}.IsHidden"/>, and <see cref="FieldVm{T}.IsReadOnly"/> from <see cref="FieldVm{T}"/>.
+/// Adds numeric constraints via <see cref="Minimum"/> and <see cref="Maximum"/>.
+/// </remarks>
 public class NumericFvm<T>(string name) : FieldVm<T>(name) where T : INumber<T>, IComparable<T>, IEquatable<T>
 {
     /// <summary>

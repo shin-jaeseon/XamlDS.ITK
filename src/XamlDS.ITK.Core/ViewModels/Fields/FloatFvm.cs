@@ -6,12 +6,13 @@
 namespace XamlDS.ITK.ViewModels.Fields;
 
 /// <summary>
-/// Represents a single-precision floating-point numeric property ViewModel.
+/// Represents a single-precision floating-point numeric field ViewModel.
 /// </summary>
 /// <remarks>
-/// This type specializes <see cref="NumericFvm{T}"/> for <see cref="float"/> and
-/// initializes <see cref="NumericFvm{T}.Minimum"/> and <see cref="NumericFvm{T}.Maximum"/>
-/// to <see cref="float.MinValue"/> and <see cref="float.MaxValue"/>, respectively.
+/// Inherits <see cref="FieldVm{T}.Value"/>, <see cref="FieldVm{T}.IsHidden"/>, and <see cref="FieldVm{T}.IsReadOnly"/>.
+/// Specializes <see cref="NumericFvm{T}"/> for <see cref="float"/> and initializes
+/// <see cref="NumericFvm{T}.Minimum"/> and <see cref="NumericFvm{T}.Maximum"/> to
+/// <see cref="float.MinValue"/> and <see cref="float.MaxValue"/>, respectively.
 /// </remarks>
 public class FloatFvm : NumericFvm<float>
 {
