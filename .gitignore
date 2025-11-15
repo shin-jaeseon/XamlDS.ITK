@@ -56,3 +56,7 @@ docs/api/
 # OS
 Thumbs.db
 .DS_Store
+
+# Copilot
+copilot_default_prompt.txt
+/.github/copilot-instructions.txt
