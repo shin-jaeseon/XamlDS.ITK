@@ -2,7 +2,7 @@
 
 namespace XamlDS.ITK.ViewModels.Panes;
 
-public class ApplicationBarPvm : HorizontalBarPvm
+public class ApplicationBarPvm : PaneVm
 {
     private SystemCommandsVm _systemCommands;
     public ApplicationBarPvm(SystemCommandsVm systemCommands)

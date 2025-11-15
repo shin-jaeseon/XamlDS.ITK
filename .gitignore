@@ -1,4 +1,4 @@
-# Visual Studio / .NET
+﻿# Visual Studio / .NET
 .vs/
 *.user
 *.suo
@@ -58,5 +58,5 @@ Thumbs.db
 .DS_Store
 
 # Copilot
-copilot_default_prompt.txt
-/.github/copilot-instructions.txt
+copilot_default_prompt.md
+/.github/instructions/private.*

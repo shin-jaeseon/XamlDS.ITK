@@ -6,11 +6,14 @@
              xmlns:local="clr-namespace:XamlDS.ITK.WPF.Views.Panes"
              mc:Ignorable="d" d:DesignWidth="800">
     <DockPanel>
-        <Border Margin="4" DockPanel.Dock="Bottom" Height="28" CornerRadius="8" Background="#19808080"/>
-        <Border Margin="36 4 4 4" DockPanel.Dock="Left" Width="112" Height="56" CornerRadius="8" Background="#33808080"/>
+        <Border Margin="6" DockPanel.Dock="Bottom" Height="28" CornerRadius="8" Background="#19808080"/>
+        <Border Margin="36 6 6 6" DockPanel.Dock="Left" Width="112" Height="48" CornerRadius="6" Background="#33808080"/>
         <ContentControl DockPanel.Dock="Left" Content="{Binding LeftContent}"/>
-        <Border Margin="4 4 36 4" DockPanel.Dock="Right" Width="112" Height="56" CornerRadius="8" Background="#33808080"/>
+        <Border Margin="6 6 36 6" DockPanel.Dock="Right" Width="112" Height="48" CornerRadius="6" Background="#33808080"/>
         <ContentControl DockPanel.Dock="Right" Content="{Binding SystemCommands.ExitApplication}"/>
+        <Border DockPanel.Dock="Right" Height="48" Width="96" BorderBrush="White" BorderThickness="2" CornerRadius="6" Margin="6"/>
+        <Border DockPanel.Dock="Right" Height="48" Width="96" Background="White" BorderThickness="0" CornerRadius="6" Margin="6"/>
+        <ContentControl DockPanel.Dock="Right" Content="{Binding SystemCommands.Test}"/>
         <ContentControl DockPanel.Dock="Right" Content="{Binding RightContent}"/>
         <ContentControl HorizontalAlignment="Center" Content="{Binding LeftContent}"/>
     </DockPanel>

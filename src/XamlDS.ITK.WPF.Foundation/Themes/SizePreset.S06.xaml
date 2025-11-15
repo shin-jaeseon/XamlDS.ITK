@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:Double x:Key="FieldHeight">48</system:Double>
+    <system:Double x:Key="FieldFontSize">14</system:Double>
+    <Thickness x:Key="FieldBorderThickness">3</Thickness>
+    <Thickness x:Key="FieldMargin">6</Thickness>
+    <Thickness x:Key="FieldPadding">12 0</Thickness>
+    <CornerRadius x:Key="FieldCornerRadius">6</CornerRadius>
+    
+</ResourceDictionary>

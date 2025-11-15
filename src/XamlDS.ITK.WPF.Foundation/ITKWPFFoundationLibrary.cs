@@ -11,6 +11,7 @@ public class ITKWPFFoundationLibrary : ITKLibrary
 {
     protected override void AddServices(HostBuilderContext context, IServiceCollection services)
     {
+        services.AddSingleton<TestCvm, WPFTestCvm>();
         services.AddSingleton<ExitApplicationCvm, WPFExitApplicationCvm>();
         services.AddTransient<DesktopWindowView>();
     }

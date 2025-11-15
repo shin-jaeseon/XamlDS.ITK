@@ -16,6 +16,8 @@ public partial class App : Application
         var appLib = new ITKSandboxWPFAppLibrary();
         appLib.Register(hostBuilder);
 
+        LoadTheme("Dark", "S06");
+
         var host = hostBuilder.Build();
         host.Start();
 
@@ -24,8 +26,6 @@ public partial class App : Application
         MainWindow.Show();
 
         base.OnStartup(e);
-
-        //var windowVm =
 
         //var host = Host.CreateDefaultBuilder(e.Args)
         //    .UseContentRoot(AppContext.BaseDirectory)
@@ -39,6 +39,26 @@ public partial class App : Application
         //        }
         //    })
         //    .Build();
+    }
+
+    private void LoadTheme(string color, string sizePreset)
+    {
+        Resources.MergedDictionaries.Clear();
+
+        Resources.MergedDictionaries.Add(new ResourceDictionary
+        {
+            Source = new Uri($"pack://application:,,,/XamlDS.ITK.WPF.Foundation;component/Themes/Color.{color}.xaml", UriKind.Absolute)
+        });
+
+        Resources.MergedDictionaries.Add(new ResourceDictionary
+        {
+            Source = new Uri($"pack://application:,,,/XamlDS.ITK.WPF.Foundation;component/Themes/SizePreset.{sizePreset}.xaml", UriKind.Absolute)
+        });
+
+        Resources.MergedDictionaries.Add(new ResourceDictionary
+        {
+            Source = new Uri("pack://application:,,,/XamlDS.ITK.WPF.Foundation;component/Themes/Styles.xaml", UriKind.Absolute)
+        });
     }
 }
 

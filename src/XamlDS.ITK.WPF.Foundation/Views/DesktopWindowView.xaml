@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XamlDS.ITK.WPF.Views"
         xmlns:Layouts="clr-namespace:XamlDS.ITK.WPF.Views.Layouts" x:Class="XamlDS.ITK.WPF.Views.DesktopWindowView"
-        mc:Ignorable="d" ThemeMode="Dark"
-        Title="{Binding WindowTitle}" Height="450" Width="800">
+        mc:Ignorable="d"
+        Background="{DynamicResource WindowBackgroundBrush}" Foreground="{DynamicResource WindowForegroundBrush}"
+        Title="{Binding WindowTitle}" Height="900" Width="1600">
 
     <Border Margin="4">
         <ContentControl Content="{Binding Child}"/>

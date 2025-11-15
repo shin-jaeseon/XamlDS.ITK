@@ -1,4 +1,4 @@
-﻿namespace XamlDS.ITK.ViewModels.Assets;
+﻿namespace XamlDS.ITK.ViewModels;
 
 public abstract class AssetVm(string name) : EntityVm(name)
 {
