@@ -7,12 +7,6 @@ public class CanvasPaneVm : ViewModelBase
 {
 }
 
-public class CanvasPanelVm : ViewModelBase
+public class CanvasPanelVm : PanelVm<CanvasPaneVm>
 {
-    private ObservableCollection<CanvasPaneVm> _children = [];
-    public ObservableCollection<CanvasPaneVm> Children
-    {
-        get => _children;
-        set => SetProperty(ref _children, value);
-    }
 }

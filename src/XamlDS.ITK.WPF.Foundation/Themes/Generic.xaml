@@ -9,5 +9,5 @@
         <ResourceDictionary Source="/XamlDS.ITK.WPF.Foundation;component/Themes/Color.Dark.xaml"/>
         <ResourceDictionary Source="/XamlDS.ITK.WPF.Foundation;component/Themes/Styles.xaml"/>
     </ResourceDictionary.MergedDictionaries>
-    
+
 </ResourceDictionary>

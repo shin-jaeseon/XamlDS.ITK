@@ -35,7 +35,7 @@ public enum TabHeaderDisplayMode
     IconAndText
 }
 
-public class TabPanelVm : ViewModelBase
+public class TabPanelVm : DecoratorHostVm
 {
     private ObservableCollection<TabPaneVm> _children = [];
     private int _selectedIndex = -1;

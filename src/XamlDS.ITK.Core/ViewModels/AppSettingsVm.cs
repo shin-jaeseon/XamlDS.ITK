@@ -7,7 +7,6 @@ public class AppSettingsVm : ViewModelBase
     private BoolFvm _topmostWindow = new("TopmostWindow")
     {
         DisplayName = "Topmost Window",
-        Description = "Determines whether the application window stays on top of all other windows.",
         Value = false,
         IsHidden = true
     };
@@ -15,7 +14,6 @@ public class AppSettingsVm : ViewModelBase
     private BoolFvm _touchFirst = new("TouchFirst")
     {
         DisplayName = "Touch First",
-        Description = "Enables touch-first interaction mode for the application.",
         Value = false,
         IsHidden = true
     };
@@ -23,7 +21,6 @@ public class AppSettingsVm : ViewModelBase
     private RadioFvm<string> _themeColor = new("ThemeColor")
     {
         DisplayName = "Theme Color",
-        Description = "Sets the theme color of the application.",
         Items =
         {
             new RadioItemVm<string>("Light", "Light"),
@@ -36,7 +33,6 @@ public class AppSettingsVm : ViewModelBase
     private RadioFvm<string> _themeSizePreset = new("ThemeSizePreset")
     {
         DisplayName = "Theme Size Preset",
-        Description = "Sets the size preset for the application's theme.",
         Items =
         {
             new RadioItemVm<string>("Preset4", "Preset4"),

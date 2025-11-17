@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XamlDS.ITK.WPF.Views"
         xmlns:Layouts="clr-namespace:XamlDS.ITK.WPF.Views.Layouts" x:Class="XamlDS.ITK.WPF.Views.DesktopWindowView"
+        xmlns:controls="clr-namespace:XamlDS.ITK.WPF.Controls"
         mc:Ignorable="d"
         Background="{DynamicResource WindowBackgroundBrush}" Foreground="{DynamicResource WindowForegroundBrush}"
         Title="{Binding WindowTitle}" Height="900" Width="1600">
 
-    <Border Margin="4">
-        <ContentControl Content="{Binding Child}"/>
+    <Border Padding="4">
+        <ContentControl Content="{Binding Content}"/>
     </Border>
 </Window>

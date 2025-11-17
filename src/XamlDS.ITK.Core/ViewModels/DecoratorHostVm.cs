@@ -3,35 +3,35 @@
 namespace XamlDS.ITK.ViewModels;
 
 /// <summary>
-/// Defines the contract for a ViewModel that can host <see cref="ViewDecoratorVm"/> instances.
+/// Defines the contract for a ViewModel that can host <see cref="DecoratorVm"/> instances.
 /// </summary>
 public interface IDecoratorHost
 {
     /// <summary>
     /// Gets a read-only view of decorators applied to this host.
     /// </summary>
-    ReadOnlyObservableCollection<ViewDecoratorVm> Decorators { get; }
+    ReadOnlyObservableCollection<DecoratorVm> Decorators { get; }
 
     /// <summary>
     /// Returns true when a decorator of type <typeparamref name="T"/> exists.
     /// </summary>
-    bool HasDecorator<T>() where T : ViewDecoratorVm;
+    bool HasDecorator<T>() where T : DecoratorVm;
 
     /// <summary>
     /// Gets the existing decorator of type <typeparamref name="T"/> if any; otherwise creates, adds and returns a new instance.
     /// Guarantees at most one instance of <typeparamref name="T"/> in the collection.
     /// </summary>
-    T EnsureDecorator<T>() where T : ViewDecoratorVm, new();
+    T EnsureDecorator<T>() where T : DecoratorVm, new();
 
     /// <summary>
     /// Attempts to get a decorator of type <typeparamref name="T"/>.
     /// </summary>
-    bool TryGetDecorator<T>(out T decorator) where T : ViewDecoratorVm;
+    bool TryGetDecorator<T>(out T decorator) where T : DecoratorVm;
 
     /// <summary>
     /// Removes a decorator of type <typeparamref name="T"/> if present.
     /// </summary>
-    bool RemoveDecorator<T>() where T : ViewDecoratorVm;
+    bool RemoveDecorator<T>() where T : DecoratorVm;
 }
 
 /// <summary>
@@ -40,27 +40,27 @@ public interface IDecoratorHost
 /// </summary>
 public abstract class DecoratorHostVm : ViewModelBase, IDecoratorHost
 {
-    private readonly ObservableCollection<ViewDecoratorVm> _decorators = new();
-    private readonly ReadOnlyObservableCollection<ViewDecoratorVm> _readOnlyDecorators;
+    private readonly ObservableCollection<DecoratorVm> _decorators = new();
+    private readonly ReadOnlyObservableCollection<DecoratorVm> _readOnlyDecorators;
 
     protected DecoratorHostVm()
     {
-        _readOnlyDecorators = new ReadOnlyObservableCollection<ViewDecoratorVm>(_decorators);
+        _readOnlyDecorators = new ReadOnlyObservableCollection<DecoratorVm>(_decorators);
     }
 
-    public ReadOnlyObservableCollection<ViewDecoratorVm> Decorators => _readOnlyDecorators;
+    public ReadOnlyObservableCollection<DecoratorVm> Decorators => _readOnlyDecorators;
 
-    public bool HasDecorator<T>() where T : ViewDecoratorVm
+    public bool HasDecorator<T>() where T : DecoratorVm
     => _decorators.Any(d => d is T);
 
-    public bool TryGetDecorator<T>(out T decorator) where T : ViewDecoratorVm
+    public bool TryGetDecorator<T>(out T decorator) where T : DecoratorVm
     {
         var d = _decorators.OfType<T>().FirstOrDefault();
         decorator = d!;
         return d is not null;
     }
 
-    public T EnsureDecorator<T>() where T : ViewDecoratorVm, new()
+    public T EnsureDecorator<T>() where T : DecoratorVm, new()
     {
         var existing = _decorators.OfType<T>().FirstOrDefault();
         if (existing is not null)
@@ -71,7 +71,7 @@ public abstract class DecoratorHostVm : ViewModelBase, IDecoratorHost
         return created;
     }
 
-    public bool RemoveDecorator<T>() where T : ViewDecoratorVm
+    public bool RemoveDecorator<T>() where T : DecoratorVm
     {
         var existing = _decorators.OfType<T>().FirstOrDefault();
         return existing is not null && _decorators.Remove(existing);

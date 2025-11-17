@@ -29,12 +29,6 @@ public class DockPaneVm : ViewModelBase
     }
 }
 
-public class DockPanelVm : ViewModelBase
+public class DockPanelVm : PanelVm<DockPaneVm>
 {
-    private ObservableCollection<DockPaneVm> _children = [];
-    public ObservableCollection<DockPaneVm> Children
-    {
-        get => _children;
-        set => SetProperty(ref _children, value);
-    }
 }

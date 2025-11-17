@@ -5,7 +5,7 @@ public class DesktopWindowVm : ViewModelBase
     private readonly AppSettingsVm _appSettings;
     private readonly AppStatesVm _appStates;
     private string _windowTitle = string.Empty;
-    private ViewModelBase? _child;
+    private object? _content;
 
     public DesktopWindowVm(AppSettingsVm appSettings, AppStatesVm appStates)
     {
@@ -23,10 +23,9 @@ public class DesktopWindowVm : ViewModelBase
         set => SetProperty(ref _windowTitle, value);
     }
 
-
-    public ViewModelBase? Child
+    public object? Content
     {
-        get => _child;
-        set => SetProperty(ref _child, value);
+        get => _content;
+        set => SetProperty(ref _content, value);
     }
 }

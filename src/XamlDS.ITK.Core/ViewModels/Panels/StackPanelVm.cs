@@ -8,7 +8,7 @@ public class StackPaneVm : ViewModelBase
     public ViewModelBase? Content { get; set; }
 }
 
-public class StackPanelVm : ViewModelBase
+public class StackPanelVm : DecoratorHostVm
 {
     private ObservableCollection<StackPaneVm> _children = [];
     public ObservableCollection<StackPaneVm> Children

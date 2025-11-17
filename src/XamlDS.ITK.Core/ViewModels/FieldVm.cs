@@ -20,8 +20,18 @@ namespace XamlDS.ITK.ViewModels;
 /// Inherits from <see cref="EntityVm"/> to leverage common ViewModel infrastructure
 /// such as property change notification via <c>SetProperty</c>.
 /// </remarks>
-public class FieldVm<T>(string name) : EntityVm(name)
+public class FieldVm<T>(string name) : DecoratorHostVm
 {
+    private readonly string _name = name;
+
+    /// <summary>
+    /// The programmatic identifier for this object.
+    /// </summary>
+    /// <remarks>
+    /// It's used as an identifier in logs and for debugging purposes.
+    /// </remarks>
+    public string Name { get => _name; }
+
     /// <summary>
     /// Backing field for <see cref="Value"/>.
     /// </summary>
@@ -34,6 +44,21 @@ public class FieldVm<T>(string name) : EntityVm(name)
     {
         get => _value;
         set => SetProperty(ref _value, value);
+    }
+
+    private string _displayName = string.Empty;
+
+    /// <summary>
+    /// Gets or sets the user-friendly name displayed in the UI.
+    /// </summary>
+    /// <remarks>
+    /// This property is used for displaying the name of the functionality or device
+    /// to the end user in the interface, such as in usage history charts or component labels.
+    /// </remarks>
+    public string DisplayName
+    {
+        get => _displayName;
+        set => SetProperty(ref _displayName, value);
     }
 
     private bool _isHidden = false;
